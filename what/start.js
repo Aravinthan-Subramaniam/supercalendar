@@ -22,7 +22,7 @@ jsonParser();
 });
 function jsonParser() {
 
-    var string = JSON.stringify();
+    var string = JSON.stringify;
     var objectValue = JSON.parse(string);
     return objectValue['mm'];
 }
