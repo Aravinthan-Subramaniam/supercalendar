@@ -1,0 +1,22 @@
+{
+  "name": "what",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aravinthan-Subramaniam/supercalendar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aravinthan-Subramaniam/supercalendar/issues"
+  },
+  "homepage": "https://github.com/Aravinthan-Subramaniam/supercalendar#readme",
+  "dependencies": {
+    "slackbots": "^1.2.0"
+  }
+}
