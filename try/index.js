@@ -16,11 +16,11 @@ bot.on('start', function() {
     // define channel, where bot exist. You can adjust it there https://my.slack.com/services
     bot.postMessageToChannel('general', 'meow!', params);
     //bot.postMessageToChannel('general',bot.getUser('arvindhangs'),params);
-jsonParser();
+//jsonParser();
     // define existing username instead of 'user_name'
 
 });
-function jsonParser() {
+/*function jsonParser() {
     var stri= bot.getUser('arvindhangs');
     console.log(stri);
     console.log("****");
@@ -31,3 +31,5 @@ function jsonParser() {
     console.log(objectValue);
     return objectValue['email'];
 }
+
+ */
