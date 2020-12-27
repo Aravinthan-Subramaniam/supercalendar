@@ -1,0 +1,17 @@
+name: BVT Workflow
+
+on:
+  pull_request_review:
+
+jobs:
+  pr_approved:
+    runs-on: [ self-hosted ]
+    steps:
+      - name: Run bvt suite if PR approved
+        run: |
+          number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+          commitId=$(jq --raw-output .pull_request.head.sha "$GITHUB_EVENT_PATH")
+          curl -X POST -H "Content-Type: application/json" \
+          https://${{ secrets.SPINNAKER_BASIC_AUTH }}@deploy-github-actions.razorpay.com/webhooks/webhook/vendor-payments \
+          -d "{\"review\":{\"state\":\"approved\"},\"pull_request\":{\"head\":{ \"sha\":\"$commitId\"},\"number\":\"$number\",\"state\":\"approved\"} }"
+
