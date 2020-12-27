@@ -2,12 +2,10 @@ name: BVT Workflow
 
 on:
   pull_request_review:
-    types: [submitted]
 
 jobs:
   pr_approved:
     runs-on: [ self-hosted ]
-    if: github.event.review.state == 'approved'
     steps:
       - name: Run bvt suite if PR approved
         run: |
